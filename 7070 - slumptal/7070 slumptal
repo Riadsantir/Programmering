@@ -26,16 +26,6 @@ while True:
     else:
         print("förlust")
 '''
-import random
-
-saldo = 0
-
-print("Välkommen att kasta tärning")
-print("Ett spel kostar 1 krona")
-print("Vinstplan:")
-print("två lika - 5 kr")
-print("en sexa - 3 kr")
-print("stege - 3 kr")
 
 import random
 
