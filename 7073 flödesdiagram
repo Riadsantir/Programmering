@@ -19,7 +19,7 @@ while gissning != 4:
     gissning = int(input("Gissa ett tal: "))
 print("Du gissade rätt.")
 '''
-
+'''
 tal = int(input("Ange ett tal: "))
 antal_gissningar = 0
 while tal != 42:
@@ -30,3 +30,39 @@ while tal != 42:
         print("För stort")
     tal = int(input("Ange ett tal: "))
 print(f"Du behövde {antal_gissningar} gissningar för att hitta rätt svar.")
+'''
+import random
+
+def sten_sax_pase():
+    spelare = input("Välj sten, sax eller påse: ").lower()
+    datorn = random.choice(["sten", "sax", "påse"])
+
+    print(f"Datorn valde: {datorn}")
+
+    if spelare == datorn:
+        print("Oavgjort!")
+    elif spelare == "sten":
+        if datorn == "sax":
+            print("Spelaren vinner!")
+        else:
+            print("Datorn vinner!")
+    elif spelare == "sax":
+        if datorn == "sten":
+            print("Datorn vinner!")
+        else:
+            print("Spelaren vinner!")
+    elif spelare == "påse":
+        if datorn == "sten":
+            print("Spelaren vinner!")
+        else:
+            print("Datorn vinner!")
+    else:
+        print("Ogiltigt val. Försök igen.")
+
+while True:
+    sten_sax_pase()
+    fortsatt = input("Vill du spela igen? (ja/nej): ").lower()
+    if fortsatt != "ja":
+        break
+
+print("Tack för att du spelade!")
