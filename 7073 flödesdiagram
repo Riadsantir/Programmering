@@ -65,4 +65,4 @@ while True:
     if fortsatt != "ja":
         break
 
-print("Tack för att du spelade!")
+print("Tack för att du spelade!!")
