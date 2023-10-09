@@ -69,6 +69,8 @@ Fil: 7073 flödesdiagram.py
 jag kan inte klistra in flödesdiagram här, men koden har jag skrivit. 
 exempel :
 
+~~~
+
 '''
 tal = int(input("Mata in ett tal: "))
 
@@ -137,6 +139,8 @@ while True:
         break
 
 print("Tack för att du spelade!!")
+
+~~~
 
 Gick riktigt bra.
 Har rittat olika flödesdiagram till alla kod som ligger där uppe, ganska enkelt att göra så och man ska använda det innan man börja programmera något projekt, så skulle jag göra i alla fall. While True och att definera, som i detta fall def sten_sax_pase(): är något nytt som jag har lärt mig, .lower också men det var ganska enkelt. 
