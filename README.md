@@ -144,3 +144,38 @@ print("Tack för att du spelade!!")
 
 Gick riktigt bra.
 Har rittat olika flödesdiagram till alla kod som ligger där uppe, ganska enkelt att göra så och man ska använda det innan man börja programmera något projekt, så skulle jag göra i alla fall. While True och att definera, som i detta fall def sten_sax_pase(): är något nytt som jag har lärt mig, .lower också men det var ganska enkelt. 
+
+Vecka 41-42 
+----------------
+Gjorde:
+### 7100 listor
+Fil: 7100 listor.py
+
+Exempel:
+
+~~~
+import random
+
+# Kasta en sexsidig tärning 10 gånger och spara resultaten i en lista
+resultat_lista = [random.randint(1, 6) for _ in range(10)]
+resultat_lista.sort()
+summa = sum(resultat_lista)
+medelvärde = summa / len(resultat_lista)
+minsta = min(resultat_lista)
+största = max(resultat_lista)
+antalet_sexor = resultat_lista.count(6)
+vanligaste_valören = max(set(resultat_lista), key = resultat_lista.count)
+
+# Skriv ut resultaten
+print("Resultat:", resultat_lista)
+print("Sorterat:", resultat_lista)
+print("Summa:", summa)
+print("Medelvärde:", medelvärde)
+print("Minsta:", minsta)
+print("Största:", största)
+print("Antal sexor:", antalet_sexor)
+print("Vanligast:", vanligaste_valören)
+
+~~~
+
+Jag har lärt mig hur man kan använda listor i Python för att spara och hantera resultat. Listor var mycket storre och bredare än vad jag trode innan jag börjar jobba med dem, de kan exempelvis användas för att samla data, som i det här fallet de olika tärningskasten. Jag har även lärt mig hur man kan använda loopar, som en for-loop, för att upprepa en handling flera gånger. I det här exemplet har jag använt en lista för att spara resultaten av tärningskasten, sedan sorterades listan och beräknades summan och medelvärdet.
