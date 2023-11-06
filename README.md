@@ -179,3 +179,42 @@ print("Vanligast:", vanligaste_valören)
 ~~~
 
 Jag har lärt mig hur man kan använda listor i Python för att spara och hantera resultat. Listor var mycket storre och bredare än vad jag trode innan jag börjar jobba med dem, de kan exempelvis användas för att samla data, som i det här fallet de olika tärningskasten. Jag har även lärt mig hur man kan använda loopar, som en for-loop, för att upprepa en handling flera gånger. I det här exemplet har jag använt en lista för att spara resultaten av tärningskasten, sedan sorterades listan och beräknades summan och medelvärdet.
+
+Vecka 43
+----------------
+Gjorde:
+### 7100 listor ( 7100 A och B 5 yatzy )
+Fil: 7100 A 5 yatzy
+     7100 B 5 yatzy
+
+Exempel:
+
+~~~
+
+import random
+def kasta_tärning():
+    return random.randint(1, 6)
+tärningskast = [kasta_tärning() for _ in range(5)]
+if all(tärning == tärningskast[0] for tärning in tärningskast):
+    print("Yatzy")
+else:
+    print("Inte Yatzy")
+
+
+~~~
+
+~~~
+import random
+
+def kasta_tärning():
+    return random.randint(1, 6)
+tärningskast = [kasta_tärning() for _ in range(5)]
+antalet_ettor = tärningskast.count(1)
+print(f"Antalet ettor är: {antalet_ettor}")
+
+~~~
+
+Jag har lärt mig hur man använder listor och loopar i Python för att hantera data och utföra olika operationer.
+Exempelvis hur man skapar och manipulerar listor i Python för att organisera och analysera data. Jag har även sett hur man kan använda loopar och villkor för att utföra olika åtgärder baserat på data i listor. Jag försökte också att lärt mig att skapa och använda funktioner för att göra koden mer strukturerad och återanvändbar. 
+
+Ingenting var svårt denna gången, det var enklare än förra uppgiften (Primtal uppgift)
