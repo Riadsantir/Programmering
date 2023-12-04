@@ -1,0 +1,8 @@
+import random
+def kasta_tärning():
+    return random.randint(1, 6)
+tärningskast = [kasta_tärning() for _ in range(5)]
+if all(tärning == tärningskast[0] for tärning in tärningskast):
+    print("Yatzy")
+else:
+    print("Inte Yatzy")
