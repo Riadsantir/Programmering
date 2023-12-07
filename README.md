@@ -250,4 +250,14 @@ Jag började med att definera funktioner på måndagen. Jag skrev ingen unik kod
 Vecka 48
 ----------------
 Gjorde:
+### klarade alla test 
+
+på måndagen så repeterade jag allt som vi gick igenom, fokuserade mest på att definiera funktioner. Att kunna läsa och förstå def funktioner hade jag nästan inga problem alls. Men att definera funktioner själv var lite jobbigt så jag jobbade med det nästan hela lektionen. På torsdagen så gjorde jag alla test som var kvar och klarade alla, jag skrev i loggboken under lektionen också. Jag installerade VSCodium på min ny dator som jag fick så jag kunde inte programmera under denna lektionen. 
+
+Vecka 49
+----------------
+Gjorde:
+### Började bestämma över projektet
+
+på måndagen så bestämmde jag att jag ska göra en miniräknare som ett litet projekt för att jag tycker att det var intressant. Jag kollade på flera YouTube videor som visar tänkesätt när man ska skapa en miniräknare med hjälp av Python. 
 
