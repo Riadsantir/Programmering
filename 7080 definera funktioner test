@@ -1,12 +1,10 @@
 def berakna_genomsnitt(tal_lista):
-    # Funktionen beräknar genomsnittet av talen i listan.
     if not tal_lista:
-        return None  # Returnera None om listan är tom
+        return None 
     else:
         return sum(tal_lista) / len(tal_lista)
 
 def klassificera_genomsnitt(genomsnitt):
-    # Funktionen klassificerar genomsnittet i olika intervall.
     if genomsnitt is None:
         return "Listan är tom"
     elif genomsnitt < 50:
@@ -17,15 +15,10 @@ def klassificera_genomsnitt(genomsnitt):
         return "Över medel"
 
 def main():
-    # Huvudprogrammet som använder de tidigare definierade funktionerna.
-
-    # Exempeldata
     tal_lista = [65, 72, 89, 45, 60]
 
-    # Beräkna genomsnittet
     genomsnitt = berakna_genomsnitt(tal_lista)
 
-    # Skriv ut genomsnittet och dess klassificering
     print("Genomsnittet är:", genomsnitt)
     print("Klassificering:", klassificera_genomsnitt(genomsnitt))
 
