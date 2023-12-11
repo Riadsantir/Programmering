@@ -13,7 +13,7 @@ def klassificera_genomsnitt(genomsnitt):
         return "Medel"
     else:
         return "Över medel"
-
+#Nah Nah
 def main():
     tal_lista = [65, 72, 89, 45, 60]
 
