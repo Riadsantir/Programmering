@@ -261,3 +261,188 @@ Gjorde:
 
 på måndagen så bestämmde jag att jag ska göra en miniräknare som ett litet projekt för att jag tycker att det var intressant. Jag kollade på flera YouTube videor som visar tänkesätt när man ska skapa en miniräknare med hjälp av Python. 
 
+
+Vecka 50
+----------------
+Gjorde:
+
+~~~
+function kastaTarning() {
+    return Math.floor(Math.random() * 6) + 1;
+}
+
+let tarningskast;
+do {
+    tarningskast = Array.from({ length: 5 }, kastaTarning);
+    if (tarningskast.every(tarning => tarning === tarningskast[0])) {
+        console.log("Yatzy");
+    } else {
+        console.log("Inte Yatzy");
+    }
+} while (!tarningskast.every(tarning => tarning === tarningskast[0]));
+
+~~~
+
+Jag har lärt mig grunderna i JavaScript och hur man kan använda slumpmässiga tal och villkor för att skapa ett enkelt tärningsspel. I detta exempel så loppar koden till jag får Yatzy.
+
+Vecka 2
+----------------
+Gjorde:
+
+~~~
+import random
+
+def guess_number():
+    number = random.randint(1, 100)
+    guess = int(input("Gissa ett nummer mellan 1 och 100: "))
+    if guess == number:
+        print("Grattis, du har gissat rätt!")
+    else:
+        print(f"Tyvärr, det rätta numret var {number}.")
+
+guess_number()
+~~~
+
+Jag har fortsatt lära mig grundläggande JavaScript genom att skapa ett enkelt nummergissningsspel. Fast där stuttade jag på massa nya saker och det fanns så många saker som inte fungerade för mig och då försökte jag att översätta den python kod som ligger övanför till javascript kod och jag kom på följande: 
+
+~~~
+function guessNumber() {
+    const readline = require('readline');
+    const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
+
+    const number = Math.floor(Math.random() * 100) + 1;
+
+    rl.question('Gissa ett nummer mellan 1 och 100: ', (answer) => {
+        const guess = parseInt(answer);
+        if (guess === number) {
+            console.log("Grattis, du har gissat rätt!");
+        } else {
+            console.log(`Tyvärr, det rätta numret var ${number}.`);
+        }
+        rl.close();
+    });
+}
+
+guessNumber();
+
+~~~
+Denna koden funkar inte riktigt för mig heller, tog lite hjälp från ChatGPT och det hjälpte inte så myckte riktigt heller men försökte i alla fall. 
+
+
+Vecka 3
+----------------
+Gjorde:
+
+~~~
+import random
+
+def generate_password():
+    characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()"
+    length = 12
+    password = "".join(random.sample(characters, length))
+    return password
+
+print("Genererat lösenord:", generate_password())
+~~~
+
+Jag har lärt mig att skapa slumpmässiga lösenord av olika längder med hjälp av JavaScript, men ändå började jag fokusera igen på python för att jag tycker att mitt projekt som jag vill göra kommer var skriven i Python, det känns svårt att hinna gör en bra medel-avancerad projekt med javascript.
+
+Vecka 4
+----------------
+Gjorde:
+
+~~~
+import random
+
+def shuffle_list(my_list):
+    random.shuffle(my_list)
+    return my_list
+
+my_list = [1, 2, 3, 4, 5]
+print("Blandad lista:", shuffle_list(my_list))
+~~~
+
+Jag har lärt mig att blanda ordningen på element i en lista med hjälp av random-modulen.
+
+Vecka 5
+----------------
+Gjorde:
+
+~~~
+import socket
+
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.connect(('192.168.1.12', 5555))
+s.send(b'Hello server!')
+data = s.recv(1024)
+print('Received:', data.decode())
+s.close()
+~~~
+
+Jag har börjat utforska socket-programmering i Python och lärt mig att skicka och ta emot data över ett nätverk.
+
+Vecka 6
+----------------
+Gjorde:
+
+~~~
+import os
+
+file_path = '/home/user/Documents/example.txt'
+if os.path.exists(file_path):
+    os.remove(file_path)
+    print("Filen har raderats.")
+else:
+    print("Filen finns inte.")
+
+~~~
+
+Jag har lärt mig att använda modulen `os` för att hantera filer och mappar i Python, inklusive att radera filer.
+
+Vecka 8
+----------------
+Gjorde:
+
+~~~
+import subprocess
+
+subprocess.run(['ls', '-l'])
+~~~
+
+Jag har börjat använda modulen `subprocess` för att köra externa kommandon och program från Python.
+
+Vecka 9
+----------------
+Gjorde:
+
+~~~
+import json
+
+data = {'name': 'John', 'age': 30, 'city': 'New York'}
+json_data = json.dumps(data)
+print(json_data)
+~~~
+
+Jag har lärt mig att konvertera Python-dictionaryn till JSON-format med hjälp av modulen `json`.
+
+Vecka 10
+----------------
+Gjorde:
+
+~~~
+import time
+
+print("Väntar i 5 sekunder...")
+time.sleep(5)
+print("Klart!")
+~~~
+
+Jag har lärt mig att använda modulen `time` för att skapa fördröjningar eller väntetider i Python-program.
+
+OBS
+--
+Jag ska redigera vecka 5 och kanske små andra saker från olika veckor. 
+
