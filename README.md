@@ -444,5 +444,5 @@ Jag har lärt mig att använda modulen `time` för att skapa fördröjningar ell
 
 OBS
 --
-Jag ska redigera vecka 5 och kanske små andra saker från olika veckor. 
+Jag ska redigera vecka 5 och vecka 8 och kanske små andra saker från olika veckor, eller kanske lägga till massa andra saker som jag gjorde fast jag orkar inte skriva om. 
 
