@@ -6,4 +6,4 @@ def generate_password():
     password = "".join(random.sample(characters, length))
     return password
 
-print("Genererat lösenord:", generate_password())
+print("Genererat lösenord:", generate_password())   
