@@ -9,8 +9,7 @@ Gjorde:
 Fil: portscanner.py
 
 Exempel:
-
-python
+~~~
 import socket
 
 def skanna_mal(mal, antal_portar):
@@ -34,7 +33,7 @@ antal_portar = int(input("[] Ange antal portar du vill skanna: "))
 print("[*] Skannar flera mål")
 for mal in mal_lista:
     skanna_mal(mal.strip(), antal_portar)
-
+~~~
 Lärdomar:
 Jag har lärt mig att skriva en fullständig och fungerande portscanner i Python, inklusive att hantera undantag och optimera skanningslogiken. Detta inkluderar djupare förståelse för socket-programmering och nätverkskommunikation i Python. Projektet gav också praktisk erfarenhet av att testa och felsöka nätverksprogram.
 
@@ -48,7 +47,7 @@ Fil: portscanner.py
 
 Exempel:
 
-python
+~~~
 def skanna_port(ip_adress, port):
     try:
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
@@ -58,7 +57,7 @@ def skanna_port(ip_adress, port):
                 print(f"[+] Port {port} är öppen")
     except Exception as e:
         print(f"Fel: {e}")
-
+~~~
 
 Lärdomar:
 Jag har fokuserat på att dela upp koden i funktioner för att förbättra dess struktur och återanvändbarhet. Specifikt har jag lärt mig hur man använder try-except block för att hantera undantag och fel som kan uppstå under nätverkskommunikation.
@@ -72,15 +71,14 @@ Gjorde:
 Fil: portscanner.py
 
 Exempel:
-
-python
+~~~
 mal_lista = input("[] Ange mål att skanna (separera med kommatecken): ").strip().split(',')
 antal_portar = int(input("[] Ange antal portar du vill skanna: "))
 
 print("[*] Skannar flera mål")
 for mal in mal_lista:
     skanna_mal(mal.strip(), antal_portar)
-
+~~~
 
 Lärdomar:
 Jag har lärt mig hur man hanterar flera mål för skanning genom att ta input från användaren och iterera över en lista med mål. Detta innebar att förbättra mina färdigheter i att hantera användarinmatning och strängmanipulering i Python.
@@ -95,7 +93,7 @@ Fil: portscanner.py
 
 Exempel:
 
-python
+~~~
 import socket
 
 def skanna_mal(mal, antal_portar):
@@ -103,6 +101,7 @@ def skanna_mal(mal, antal_portar):
     for port in range(1, antal_portar + 1):
         skanna_port(mal, port)
 
+~~~
 Lärdomar:
 Jag har lärt mig grunderna i att använda Python's socket-modul för att skapa en enkel portscanner. Specifikt har jag förstått hur man öppnar och stänger socketar samt hur man kontrollerar om en port är öppen eller stängd på en viss IP-adress.
 
@@ -141,7 +140,7 @@ Fil: socket_experiment.py
 
 Exempel:
 
-python
+~~~
 import socket
 
 # Skapa en socket
@@ -160,6 +159,7 @@ print(response)
 # Stäng socketen
 sock.close()
 
+~~~
 Lärdomar:
 Jag har utforskat grunderna i socket-programmering genom att skapa en enkel klient som ansluter till en webbserver, skickar en HTTP-förfrågan och tar emot ett svar. Detta hjälpte mig att förstå hur socketar fungerar och hur de kan användas för nätverkskommunikation.
 
