@@ -1,6 +1,209 @@
 # Programmering
 Loggbok 
 =========================
+
+### Vecka 20
+----------------
+Gjorde:
+### Fullständig implementation och testning av portscannern
+Fil: portscanner.py
+
+Exempel:
+
+\`\`\`python
+import socket
+
+def skanna_mal(mal, antal_portar):
+    print(f"\nBörjar skanna för {mal}")
+    for port in range(1, antal_portar + 1):
+        skanna_port(mal, port)
+
+def skanna_port(ip_adress, port):
+    try:
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+            sock.settimeout(1)
+            resultat = sock.connect_ex((ip_adress, port))
+            if resultat == 0:
+                print(f"[+] Port {port} är öppen")
+    except Exception as e:
+        print(f"Fel: {e}")
+
+mal_lista = input("[] Ange mål att skanna (separera med kommatecken): ").strip().split(',')
+antal_portar = int(input("[] Ange antal portar du vill skanna: "))
+
+print("[*] Skannar flera mål")
+for mal in mal_lista:
+    skanna_mal(mal.strip(), antal_portar)
+\`\`\`
+
+Lärdomar:
+Jag har lärt mig att skriva en fullständig och fungerande portscanner i Python, inklusive att hantera undantag och optimera skanningslogiken. Detta inkluderar djupare förståelse för socket-programmering och nätverkskommunikation i Python. Projektet gav också praktisk erfarenhet av att testa och felsöka nätverksprogram.
+
+---
+
+### Vecka 19
+----------------
+Gjorde:
+### Implementering av funktionsbaserad skanning
+Fil: portscanner.py
+
+Exempel:
+
+\`\`\`python
+def skanna_port(ip_adress, port):
+    try:
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+            sock.settimeout(1)
+            resultat = sock.connect_ex((ip_adress, port))
+            if resultat == 0:
+                print(f"[+] Port {port} är öppen")
+    except Exception as e:
+        print(f"Fel: {e}")
+\`\`\`
+
+Lärdomar:
+Jag har fokuserat på att dela upp koden i funktioner för att förbättra dess struktur och återanvändbarhet. Specifikt har jag lärt mig hur man använder try-except block för att hantera undantag och fel som kan uppstå under nätverkskommunikation.
+
+---
+
+### Vecka 18
+----------------
+Gjorde:
+### Hantering av flera mål för skanning
+Fil: portscanner.py
+
+Exempel:
+
+\`\`\`python
+mal_lista = input("[] Ange mål att skanna (separera med kommatecken): ").strip().split(',')
+antal_portar = int(input("[] Ange antal portar du vill skanna: "))
+
+print("[*] Skannar flera mål")
+for mal in mal_lista:
+    skanna_mal(mal.strip(), antal_portar)
+\`\`\`
+
+Lärdomar:
+Jag har lärt mig hur man hanterar flera mål för skanning genom att ta input från användaren och iterera över en lista med mål. Detta innebar att förbättra mina färdigheter i att hantera användarinmatning och strängmanipulering i Python.
+
+---
+
+### Vecka 17
+----------------
+Gjorde:
+### Grundläggande portskanning
+Fil: portscanner.py
+
+Exempel:
+
+\`\`\`python
+import socket
+
+def skanna_mal(mal, antal_portar):
+    print(f"\nBörjar skanna för {mal}")
+    for port in range(1, antal_portar + 1):
+        skanna_port(mal, port)
+\`\`\`
+
+Lärdomar:
+Jag har lärt mig grunderna i att använda Python's socket-modul för att skapa en enkel portscanner. Specifikt har jag förstått hur man öppnar och stänger socketar samt hur man kontrollerar om en port är öppen eller stängd på en viss IP-adress.
+
+---
+
+### Vecka 16
+----------------
+Gjorde:
+### Förberedelser och planering
+Fil: planering.md
+
+Exempel:
+
+\`\`\`markdown
+# Planering för Portscanner Projekt
+
+## Mål:
+- Skapa en funktionell portscanner i Python
+- Lära mig grunderna i nätverksprogrammering med socket-modulen
+
+## Steg:
+1. Lära mig grundläggande nätverkskoncept och socket-programmering
+2. Implementera grundläggande portskanning
+3. Utöka med hantering av flera mål
+4. Testa och optimera koden
+\`\`\`
+
+Lärdomar:
+Jag har fokuserat på att planera projektet och identifiera de steg som krävs för att slutföra det. Detta inkluderade att sätta upp mål och delmål samt att skapa en tidsplan för att säkerställa att projektet slutförs i tid.
+
+---
+
+### Vecka 15
+----------------
+Gjorde:
+### Utforskning av socket-programmering
+Fil: socket_experiment.py
+
+Exempel:
+
+\`\`\`python
+import socket
+
+# Skapa en socket
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+# Anslut till en server
+sock.connect(('example.com', 80))
+
+# Skicka en HTTP-förfrågan
+sock.sendall(b"GET / HTTP/1.1\r\nHost: example.com\r\n\r\n")
+
+# Ta emot svar
+response = sock.recv(4096)
+print(response)
+
+# Stäng socketen
+sock.close()
+\`\`\`
+
+Lärdomar:
+Jag har utforskat grunderna i socket-programmering genom att skapa en enkel klient som ansluter till en webbserver, skickar en HTTP-förfrågan och tar emot ett svar. Detta hjälpte mig att förstå hur socketar fungerar och hur de kan användas för nätverkskommunikation.
+
+---
+
+### Vecka 14
+----------------
+Gjorde:
+Här bestämde jag mig att skita i bakdorren för att det behöver ett server eller en virtual machine för att testa och det är svårt att visa upp det till Rikard. Men jag har faktiskt fixade klart det. Men nu börjar jag med portscanner.
+### Inledande forskning och planering
+Fil: research_notes.md
+
+Exempel:
+
+\`\`\`markdown
+# Forskning om Portscanners
+
+## Vad är en portscanner?
+En portscanner är ett verktyg som används för att skanna en värddators nätverksportar och identifiera vilka portar som är öppna och kan ta emot anslutningar.
+
+## Vanliga verktyg:
+- Nmap
+- Netcat
+
+## Mål för projektet:
+- Förstå hur portscanning fungerar
+- Skapa en enkel portscanner i Python
+\`\`\`
+
+Lärdomar:
+Jag har genomfört inledande forskning om portscanners och deras användning. Detta inkluderade att läsa om olika portscanner-verktyg som Nmap och Netcat samt att förstå de grundläggande koncepten bakom portscanning.
+
+
+
+Vecka 14
+----------------
+Gjorde: Påsklovet
+
+
 Vecka 12-13
 ----------------
 Gjorde: (absolut inte färdig kod än)
