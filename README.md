@@ -2,7 +2,7 @@
 Loggbok 
 =========================
 
-### Vecka 20
+Vecka 20
 ----------------
 Gjorde:
 ### Fullständig implementation och testning av portscannern
@@ -39,7 +39,7 @@ Jag har lärt mig att skriva en fullständig och fungerande portscanner i Python
 
 ---
 
-### Vecka 19
+Vecka 19
 ----------------
 Gjorde:
 ### Implementering av funktionsbaserad skanning
@@ -64,7 +64,7 @@ Jag har fokuserat på att dela upp koden i funktioner för att förbättra dess 
 
 ---
 
-### Vecka 18
+Vecka 18
 ----------------
 Gjorde:
 ### Hantering av flera mål för skanning
@@ -85,7 +85,7 @@ Jag har lärt mig hur man hanterar flera mål för skanning genom att ta input f
 
 ---
 
-### Vecka 17
+Vecka 17
 ----------------
 Gjorde:
 ### Grundläggande portskanning
@@ -107,7 +107,7 @@ Jag har lärt mig grunderna i att använda Python's socket-modul för att skapa 
 
 ---
 
-### Vecka 16
+Vecka 16
 ----------------
 Gjorde:
 ### Förberedelser och planering
@@ -132,7 +132,7 @@ Jag har fokuserat på att planera projektet och identifiera de steg som krävs f
 
 ---
 
-### Vecka 15
+Vecka 15
 ----------------
 Gjorde:
 ### Utforskning av socket-programmering
@@ -165,7 +165,7 @@ Jag har utforskat grunderna i socket-programmering genom att skapa en enkel klie
 
 ---
 
-### Vecka 14
+Vecka 14
 ----------------
 Gjorde:
 Här bestämde jag mig att skita i bakdorren för att det behöver ett server eller en virtual machine för att testa och det är svårt att visa upp det till Rikard. Men jag har faktiskt fixade klart det. Men nu börjar jag med portscanner.
