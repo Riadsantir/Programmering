@@ -176,27 +176,20 @@ Exempel:
 
 # Forskning om Portscanners
 
-## Vad är en portscanner?
+### Vad är en portscanner?
 En portscanner är ett verktyg som används för att skanna en värddators nätverksportar och identifiera vilka portar som är öppna och kan ta emot anslutningar.
 
-## Vanliga verktyg:
+### Vanliga verktyg:
 - Nmap
 - Netcat
 
-## Mål för projektet:
+### Mål för projektet:
 - Förstå hur portscanning fungerar
 - Skapa en enkel portscanner i Python
 
 
 Lärdomar:
 Jag har genomfört inledande forskning om portscanners och deras användning. Detta inkluderade att läsa om olika portscanner-verktyg som Nmap och Netcat samt att förstå de grundläggande koncepten bakom portscanning.
-
-
-
-Vecka 14
-----------------
-Gjorde: Påsklovet
-
 
 Vecka 12-13
 ----------------
