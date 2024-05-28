@@ -142,21 +142,11 @@ Exempel:
 
 ~~~
 import socket
-
-# Skapa en socket
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
-# Anslut till en server
 sock.connect(('example.com', 80))
-
-# Skicka en HTTP-förfrågan
 sock.sendall(b"GET / HTTP/1.1\r\nHost: example.com\r\n\r\n")
-
-# Ta emot svar
 response = sock.recv(4096)
 print(response)
-
-# Stäng socketen
 sock.close()
 
 ~~~
