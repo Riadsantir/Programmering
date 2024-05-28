@@ -115,13 +115,13 @@ Fil: planering.md
 
 Exempel:
 
-# Planering för Portscanner Projekt
+## Planering för Portscanner Projekt
 
-## Mål:
+### Mål:
 - Skapa en funktionell portscanner i Python
 - Lära mig grunderna i nätverksprogrammering med socket-modulen
 
-## Steg:
+### Steg:
 1. Lära mig grundläggande nätverkskoncept och socket-programmering
 2. Implementera grundläggande portskanning
 3. Utöka med hantering av flera mål
